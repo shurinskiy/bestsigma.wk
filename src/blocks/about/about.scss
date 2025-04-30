@@ -1,0 +1,48 @@
+@use 'lib' as *;
+
+.about {
+	$self: &;
+	background: url('./images/bg-about.svg') calc(50% + 75px) 50% / cover no-repeat #fff;
+	min-height: 710px;
+	padding: 50px 0	;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+
+	&__inner {
+		display: flex;
+		grid-gap: 18px;
+		align-items: center;
+		max-width: 1060px;
+	}
+
+	&__side {
+
+	}
+
+	&__title {
+		color: var(--darkgreen);
+		margin-bottom: 20px;
+		font-weight: 800;
+		font-size: 70px;
+	}
+	
+	&__text {
+		color: var(--darkgreen);
+		margin-bottom: 50px;
+		font-weight: 300;
+		font-size: 25px;
+		letter-spacing: 0.023em;
+	}
+
+	&__image {
+		width: 490px;
+		aspect-ratio: 1;
+		flex-shrink: 0;
+		border: 30px solid var(--green);
+		box-sizing: content-box;
+		border-radius: 1000px;
+		margin-right: -250px;
+		overflow: hidden;
+	}
+}

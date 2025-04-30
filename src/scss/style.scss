@@ -14,7 +14,7 @@
 );
 
 @use "../blocks/**/*.scss";
-// @use "../../node_modules/swiper/swiper";
+@use "../../node_modules/swiper/swiper";
 
 // Browsersync mark
 #__bs_notify__ { 
@@ -26,15 +26,15 @@
 body { @include screen-media(); }
 
 
-// @include font-face("Montserrat-ExtraLight", "MR", 200);
-// @include font-face("Montserrat-ExtraBold", "MR", 800);
-// @include font-face("Montserrat-SemiBold", "MR", 600);
-// @include font-face("Montserrat-Regular", "MR", 400);
-// @include font-face("Montserrat-Medium", "MR", 500);
-// @include font-face("Montserrat-Light", "MR", 300);
-// @include font-face("Montserrat-Black", "MR", 900);
-// @include font-face("Montserrat-Bold", "MR", 700);
-// @include font-face("Montserrat-Thin", "MR", 100);
+@include font-face("Inter-ExtraLight", "MR", 200);
+@include font-face("Inter-ExtraBold", "MR", 800);
+@include font-face("Inter-SemiBold", "MR", 600);
+@include font-face("Inter-Regular", "MR", 400);
+@include font-face("Inter-Medium", "MR", 500);
+@include font-face("Inter-Light", "MR", 300);
+@include font-face("Inter-Black", "MR", 900);
+@include font-face("Inter-Bold", "MR", 700);
+@include font-face("Inter-Thin", "MR", 100);
 
 body, html {
 	// scrollbar-gutter: stable;
@@ -43,12 +43,16 @@ body, html {
 	background-color: var(--background);
 	font-size: var(--size);
 	color: var(--text);
-	font-family: sans-serif;
+	font-family: "MR", sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 .footer {

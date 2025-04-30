@@ -1,0 +1,78 @@
+@use 'lib' as *;
+
+.choice {
+	$self: &;
+	padding: 105px 0 140px;
+
+	&__inner {
+		max-width: 1200px;
+		position: relative;
+
+		&::before {
+			display: block;
+			content: '';
+			background: url('./images/decor-1.svg') center / contain no-repeat transparent;
+			position: absolute;
+			height: 440px;
+			width: 640px;
+			left: -440px;
+			bottom: -280px;
+			z-index: 1;
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			background: url('./images/decor-2.svg') center / contain no-repeat transparent;
+			position: absolute;
+			height: 280px;
+			width: 260px;
+			left: 100%;
+			top: -90px;
+			z-index: 1;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 70px;
+	}
+
+	&__items {
+		z-index: 2;
+				
+		.swiper-wrapper {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 18px;
+		}
+	}
+
+	&__item {
+		padding: 35px 0 90px;
+	}
+
+	&__icon {
+		margin-bottom: 60px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		margin-bottom: 18px;
+		font-weight: 500;
+		font-size: 25px;
+	}
+	
+	&__text {
+		text-align: center;
+		font-weight: 200;
+		font-size: 20px;
+		max-width: 350px;
+		margin: 0 auto;
+	}
+}

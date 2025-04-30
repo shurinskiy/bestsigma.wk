@@ -1,24 +1,237 @@
-<!DOCTYPE html> 
-<html lang="ru"> 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
-	<link rel="shortcut icon" href="images/favicon.ico"> 
-	<link rel="stylesheet" href="style.css?v=0"> 
-	<title></title> 
-</head> 
-<body id="home"> 
-<header class="header ">
-  
-</header> 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css?v=1746048690095">
+    <title></title>
+</head>
+<body id="home">
+<header class="header " data-header-js>
+    <div class="header__inner container">
+        <div class="header__top">
+            <button class="header__toggle">
+                <img src="./images/toggle-icon.svg" alt="">
+            </button>
+            <nav class="header__menu menu">
+                <button class="menu__close">
+                    <img src="./images/close-icon.svg" alt="">
+                </button>
+                <a class="menu__link" href="./">блог</a>
+                <a class="menu__link" href="./">кто мы?</a>
+                <a class="menu__link" href="./">домашняя страница</a>
+            </nav>
+            <a class="header__logo" href="./"><img src="./images/logo.webp" alt=""></a>
+        </div>
+        <div class="header__body">
+            <div class="header__image">
+                <img src="./images/stuff/header-image.webp" alt="">
+            </div>
+            <div class="header__side">
+                <h1 class="header__title">Пенсия с&#160;умом -<br> жизнь с&#160;удовольствием</h1>
+                <div class="header__sentence">Мы&#160;поможем вам спланировать пенсию грамотно -<br> с&#160;учётом всех нюансов и&#160;возможностей. Индивидуальный подход для уверенного будущего.</div>
+                <a class="header__button" href="./">Связаться с&#160;нами</a>
+            </div>
+        </div>
+    </div>
+</header>
 
+<section class="planning">
+    <div class="planning__inner container">
+        <h2 class="planning__title title">Планирование пенсии&#160;&#8212; почему это важно?</h2>
+        <div class="planning__text">
+            <div class="planning__row">
+                <h3>Рациональное использование накоплений</h3>
+                <p>Грамотный анализ всех ваших активов позволяет использовать их&#160;с&#160;максимальной пользой&#160;&#8212; без потерь и&#160;ненужного риска.</p>
+            </div>
+            <div class="planning__row">
+                <h3>Персональные решения</h3>
+                <p>У&#160;каждого человека&#160;&#8212; своя история, цели и&#160;ресурсы. Индивидуальный план учитывает именно вашу ситуацию и&#160;желания.</p>
+            </div>
+            <div class="planning__row">
+                <h3>Минимизация налогов и&#160;потерь</h3>
+                <p>Грамотное распределение сбережений помогает сохранить больше средств за&#160;счёт законных инструментов оптимизации.</p>
+            </div>
+            <div class="planning__row">
+                <h3>Поддержка и&#160;сопровождение</h3>
+                <p>Вы&#160;не&#160;одни в&#160;этом процессе&#160;&#8212; мы&#160;сопровождаем вас на&#160;каждом этапе, вносим изменения по&#160;мере необходимости и&#160;помогаем принимать взвешенные решения.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="service" data-service-js>
+    <div class="service__inner container">
+        <h2 class="service__title title">Наши услуги</h2>
+        <div class="service__items swiper">
+            <div class="swiper-wrapper">
+                <div class="service__item swiper-slide">
+                    <div class="service__icon"><img src="./images/card-icon-1.svg" alt=""></div>
+                    <h3 class="service__subtitle">Формирование<br> пенсии</h3>
+                    <div class="service__text">Управление пенсионными фондами, просчет пенсионных выплат</div>
+                </div>
+                <div class="service__item swiper-slide">
+                    <div class="service__icon"><img src="./images/card-icon-2.svg" alt=""></div>
+                    <h3 class="service__subtitle">Финансовая<br> помощь</h3>
+                    <div class="service__text">оформление выходных пособий, снатие пенсионных накоплений</div>
+                </div>
+                <div class="service__item swiper-slide">
+                    <div class="service__icon"><img src="./images/card-icon-3.svg" alt=""></div>
+                    <h3 class="service__subtitle">Возврат<br> налогов</h3>
+                    <div class="service__text">Возврат налогов от&#160;мас ахнаса, заполнение формы 161</div>
+                </div>
+                <div class="service__item swiper-slide">
+                    <div class="service__icon"><img src="./images/card-icon-4.svg" alt=""></div>
+                    <h3 class="service__subtitle">Планирование<br> пенсионныx выплат</h3>
+                    <div class="service__text">Пенсия при работе, Освобождения от&#160;налога, выплаты от&#160;Битуах Леуми</div>
+                </div>
+            </div>
+            <div class="service__pagination"></div>
+        </div>
+    </div>
+</section>
 
-<footer class="footer"> 
-  
-</footer> 
+<section class="about">
+    <div class="about__inner container">
+        <div class="about__side">
+            <h2 class="about__title">О&#160;нас</h2>
+            <div class="about__text">Best Sigma основана Яном Бронфманом и&#160;Эльдаром Портновым.<br> Цель компании&#160;&#8212; помогать людям и&#160;предоставлять продуманые и&#160;надежные решения в&#160;области пенсий, налогов и&#160;финансов, с&#160;упором на&#160;индивидуальный подход к&#160;каждому клиенту.<br> Наша сила&#160;&#8212; в&#160;профессионализме и&#160;крепких отношениях с&#160;клиентами, благодаря которым мы&#160;можем предложить наилучшие решения и&#160;надёжную поддержку.</div>
+        </div>
+        <div class="about__image">
+            <img src="./images/stuff/about-image.webp" alt="">
+        </div>
+    </div>
+</section>
 
+<section class="choice" data-choice-js>
+    <div class="choice__inner container">
+        <h2 class="choice__title title">Почему выбирают нас?</h2>
+        <div class="choice__items swiper">
+            <div class="swiper-wrapper">
+                <div class="choice__item swiper-slide">
+                    <div class="choice__icon"><img src="./images/card-icon-7.svg" alt=""></div>
+                    <h3 class="choice__subtitle">Профессиональные<br> консультации</h3>
+                    <div class="choice__text">Наша команда&#160;&#8212; это опытные консультанты по&#160;пенсиям и&#160;финансам, которые помогают вам разобраться в&#160;возможностях и&#160;принять взвешенные решения.</div>
+                </div>
+                <div class="choice__item swiper-slide">
+                    <div class="choice__icon"><img src="./images/card-icon-6.svg" alt=""></div>
+                    <h3 class="choice__subtitle">Индивидуальные<br> решения</h3>
+                    <div class="choice__text">Мы&#160;создаём решения, которые отражают вашу личную финансовую картину&#160;&#8212; от&#160;пенсионного планирования до&#160;инвестиций и&#160;накоплений. Никаких шаблонов&#160;&#8212; только то, что работает для вас.</div>
+                </div>
+                <div class="choice__item swiper-slide">
+                    <div class="choice__icon"><img src="./images/card-icon-5.svg" alt=""></div>
+                    <h3 class="choice__subtitle">Долгосрочная поддержка и&#160;сопровождение</h3>
+                    <div class="choice__text">Для нас важно быть не&#160;просто консультантами, а&#160;надёжным партнёром. Даже после выполнения плана мы&#160;остаёмся на&#160;связи, чтобы помочь, если возникнут вопросы, изменения или новые задачи.</div>
+                </div>
+            </div>
+            <div class="choice__pagination"></div>
+        </div>
+    </div>
+</section>
 
-<script src="common.js?v=0"></script> 
-</body> 
+<section class="reviews">
+    <div class="reviews__inner container">
+        <h2 class="reviews__title title">Отзывы клиентов</h2>
+        <div class="reviews__items">
+            <div class="reviews__item">
+                <div class="reviews__text">&#171;Я&#160;не&#160;была уверена, как управлять своими сбережениями перед выходом на&#160;пенсию, но&#160;специалисты BestSigma помогли мне на&#160;каждом этапе. Они создали план, идеально подходящий для меня и&#160;моей семьи.&#187;</div>
+                <h3 class="reviews__name">Анат Л.</h3>
+                <div class="reviews__position">бухгалтер</div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__text">&#171;Компания предоставила мне профессиональное сопровождение на&#160;высоком уровне. Благодаря им&#160;я&#160;смог максимально использовать все полагающиеся мне льготы и&#160;спланировать стабильное финансовое будущее.&#187;</div>
+                <h3 class="reviews__name">Йоси Г.</h3>
+                <div class="reviews__position">врач</div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__text">&#171;Обслуживание, которое я&#160;получил от&#160;BestSigma, было исключительным. Команда была терпеливой, внимательной и&#160;дала мне ощущение настоящих партнеров в&#160;процессе выхода на&#160;пенсию.&#187;</div>
+                <h3 class="reviews__name">Даниэль Ш.</h3>
+                <div class="reviews__position">пенсионер-инженер</div>
+            </div>
+            <div class="reviews__item">
+                <div class="reviews__text">&#171;Компания BestSigma сопровождала меня в&#160;процессе выхода на&#160;пенсию профессионально и&#160;заботливо. Они объяснили каждый шаг и&#160;помогли принимать взвешенные решения. Благодаря им&#160;я&#160;чувствую финансовую уверенность и&#160;готовность к&#160;новому этапу в&#160;жизни.&#187;</div>
+                <h3 class="reviews__name">Мири М.</h3>
+                <div class="reviews__position">бывшая учительница</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog">
+    <div class="blog__inner container">
+        <h2 class="blog__title title">Блог</h2>
+        <div class="blog__items">
+            <div class="blog__item">
+                <div class="blog__image">
+                    <img src="./images/stuff/blog-image-1.webp" alt="">
+                </div>
+                <h3 class="blog__subtitle">Ключ к&#160;сбалансированной и&#160;удовлетворительной жизни</h3>
+                <div class="blog__data">05.14.2024</div>
+                <div class="blog__text">Выход на&#160;пенсию&#160;&#8212; это не&#160;просто изменение повседневной рутины, это возможность заново построить свою жизнь&#8230;</div>
+                <a class="blog__link" href="./">Продолжить чтение</a>
+            </div>
+            <div class="blog__item">
+                <div class="blog__image">
+                    <img src="./images/stuff/blog-image-2.webp" alt="">
+                </div>
+                <h3 class="blog__subtitle">Выход на&#160;пенсию: начало нового пути</h3>
+                <div class="blog__data">12.11.2023</div>
+                <div class="blog__text">Выход на&#160;пенсию символизирует окончание важной главы в&#160;жизни, но&#160;также и&#160;начало нового пути, полного&#8230;</div>
+                <a class="blog__link" href="./">Продолжить чтение</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__side">
+            <a class="footer__logo" href="./"><img src="./images/logo.webp" alt=""></a>
+            <div class="footer__contacts">
+                <div class="footer__contact">
+                    <a href="./">Ха-Хагана 13 Ришон ле-Цион</a>
+                    <img src="./images/contact-icon-geo.svg" alt="">
+                </div>
+                <div class="footer__contact">
+                    <a href="./">+972 524455544</a>
+                    <img src="./images/contact-icon-phone.svg" alt="">
+                </div>
+                <div class="footer__contact">
+                    <a href="./">0524455@gmail.com</a>
+                    <img src="./images/contact-icon-email.svg" alt="">
+                </div>
+            </div>
+            <div class="footer__socials">
+                <a class="footer__social" href="./">
+                    <img src="./images/social-icon-insta.svg" alt="">
+                </a>
+                <a class="footer__social" href="./">
+                    <img src="./images/social-icon-fbook.svg" alt="">
+                </a>
+                <a class="footer__social" href="./">
+                    <img src="./images/social-icon-whapp.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <form class="footer__form form" action="./" data-form-js>
+            <h2 class="form__title title">Связаться с&#160;нами</h2>
+            <div class="form__text">Если у&#160;вас есть дополнительные вопросы или вы&#160;хотите записаться на&#160;прием, оставьте свои данные, и&#160;мы&#160;свяжемся с&#160;вами как можно скорее.</div>
+            <h3 class="form__subtitle">Имя</h3>
+            <div class="form__field">
+                <input type="text" name="name">
+                <span class="form__error"></span>
+            </div>
+            <h3 class="form__subtitle">Мобильный телефон</h3>
+            <div class="form__field">
+                <input type="text" name="phone">
+                <span class="form__error"></span>
+            </div>
+            <button class="form__button">Отправить</button>
+        </form>
+    </div>
+</footer>
+
+<script src="common.js?v=1746048690095"></script>
+</body>
 </html>

@@ -1,0 +1,55 @@
+@use 'lib' as *;
+
+.form {
+	$self: &;
+	
+	&__title {
+		margin-bottom: 20px;
+		// text-align: right;
+	}
+	
+	&__text {
+		font-weight: 300;
+		// text-align: right;
+		margin-bottom: 34px;
+	}
+	
+	&__subtitle {
+		// text-align: right;
+		color: #7C7DA1;
+		font-size: 20px;
+	}
+
+	&__field {
+		border-bottom: 3px solid #000;
+		margin-bottom: 16px;
+
+		input {
+			@extend %reset-input;
+			height: 55px;
+			width: 100%;
+		}
+	}
+
+	&__error {
+		color: #cc0000;
+		font-size: 14px;
+	}
+
+	&__button {
+		@extend %reset-button;
+		min-height: 78px;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		max-width: 310px;
+		background: linear-gradient(#2C6941 0%, #669F77 100%);
+		border-radius: 100px;
+		font-size: 22px;
+		font-weight: 500;
+		color: #fff;
+		margin: 55px auto 0;
+	}
+}

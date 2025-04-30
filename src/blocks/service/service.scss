@@ -1,0 +1,59 @@
+@use 'lib' as *;
+
+.service {
+	$self: &;
+	padding: 125px 0 105px;
+
+	&__inner {
+		max-width: 1190px;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	&__items {
+		
+		.swiper-wrapper {
+			padding-bottom: 5px;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 18px;
+		}
+	}
+
+	&__item {
+		grid-column: span 1;
+		background-color: #fff;
+		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+		border-radius: 40px;
+		padding: 50px 22px 32px;
+	}
+
+	&__icon {
+		margin-bottom: 32px;
+		
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-weight: 500;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	
+	&__text {
+		text-align: center;
+		font-weight: 100;
+		font-size: 20px;
+	}
+
+	&__pagination {
+
+	}
+}

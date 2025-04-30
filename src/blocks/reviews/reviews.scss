@@ -1,0 +1,54 @@
+@use 'lib' as *;
+
+.reviews {
+	$self: &;
+
+	&__inner {
+		background-color: var(--lightgreen);
+		padding: 70px 48px 118px;
+		border-radius: 25px;
+		max-width: 1064px;
+	}
+
+	&__title {
+		font-size: 50px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 64px;
+		color: #000;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 25px;
+	}
+
+	&__item {
+		padding: 26px 18px 28px;
+		background-color: #fff;
+		display: flex;
+		flex-flow: column nowrap;
+		// border-radius: 5px;
+	}
+
+	&__text {
+		text-align: center;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 1.38;
+		margin-bottom: auto;
+	}
+
+	&__name {
+		text-align: center;
+		font-weight: 700;
+		font-size: 15px;
+		padding-top: 20px;
+	}
+	
+	&__position {
+		text-align: center;
+		font-size: 10px;
+	}
+}
