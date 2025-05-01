@@ -16,14 +16,19 @@
 			display: block;
 			content: '';
 			background: url('./images/decor-1.svg') center / contain no-repeat transparent;
-			width: fluid(640px, 160px);
+			width: fluid(600px, 200px);
 			aspect-ratio: 1.45;
 			position: absolute;
-			bottom: -280px;
-			left: -440px;
+			translate: -80% 75%;
+			bottom: 0;
+			left: 0;
 			z-index: 1;
-		}
 
+			@include media('<=xs') {
+				translate: -50% 50%;
+			}
+		}
+	
 		&::after {
 			display: block;
 			content: '';
@@ -32,8 +37,13 @@
 			aspect-ratio: 1.1;
 			position: absolute;
 			left: 100%;
-			top: -90px;
+			top: 0;
 			z-index: 1;
+			translate: -10% -20%;
+			
+			@include media('<=lg') {
+				translate: -30% -40%;
+			}
 		}
 	}
 
@@ -64,7 +74,7 @@
 		}
 	}
 
-	&__item {
+	&__item.swiper-slide {
 		// padding: 35px 0 90px;
 	}
 

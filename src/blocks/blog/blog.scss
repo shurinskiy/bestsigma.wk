@@ -48,9 +48,10 @@
 		}
 	}
 
-	&__item {
+	&__item.swiper-slide {
 		display: flex;
 		flex-flow: column nowrap;
+		height: auto;
 	}
 
 	&__image {

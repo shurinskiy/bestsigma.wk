@@ -45,16 +45,13 @@
 		}
 	}
 
-	&__item {
+	&__item.swiper-slide {
 		grid-column: span 1;
 		background-color: #fff;
 		box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 		border-radius: 40px;
 		padding: 50px 22px 32px;
-		
-		&.swiper-slide {
-			height: auto;
-		}
+		height: auto;
 	}
 
 	&__icon {
