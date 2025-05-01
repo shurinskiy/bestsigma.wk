@@ -3,6 +3,16 @@
 .reviews {
 	$self: &;
 
+	&_rtl {
+		#{$self}__title {
+			direction: rtl;
+		}
+		
+		#{$self}__item {
+			direction: rtl;
+		}
+	}
+
 	&__inner {
 		background-color: var(--lightgreen);
 		padding: 70px 48px 118px;
@@ -11,7 +21,7 @@
 	}
 
 	&__title {
-		font-size: 50px;
+		font-size: fluid(50px, 40px);
 		font-weight: 700;
 		text-align: center;
 		margin-bottom: 64px;
@@ -22,6 +32,18 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-gap: 25px;
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=sm') {
+			grid-gap: 18px;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: repeat(1, 1fr);
+		}
 	}
 
 	&__item {

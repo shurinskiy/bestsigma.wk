@@ -6,44 +6,57 @@
 	&__inner {
 		max-width: 1060px;
 		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
 		
 		&::before {
 			display: block;
 			content: '';
 			background: url('./images/decor-2.svg') center / contain no-repeat transparent;
+			width: fluid(620px, 150px);
+			aspect-ratio: 1.1;
 			position: absolute;
-			height: 570px;
-			width: 620px;
-			left: calc(100% - 50px);
-			top: -125px;
 			z-index: 1;
+			left: 100%;
+			top: 100%;
+			translate: -9% -104%;
+			
+			@include media('<=lg') {
+				translate: -30% -30%;
+			}
 		}
 	}
 
 	&__title {
+		direction: rtl;
 		margin-bottom: 28px;
-		position: relative;
 		z-index: 1;
+		font-size: fluid(40px, 30px);
+		font-weight: 700;
+		max-width: 810px;
+		color: #000;
 	}
 
 	&__text {
-		font-size: 20px;
+		direction: rtl;
+		font-size: fluid(20px, 15px);
 		max-width: 810px;
-		position: relative;
 		z-index: 1;
 	}
 	
 	&__row {
 		font-weight: 200;
 		margin-bottom: 22px;
-	
+		
 		h3 {
 			font-weight: 400;
 			line-height: 1.3;
 			
 			&::before {
+				direction: rtl;
 				display: inline-block;
-				margin-right: 10px;
+				margin-inline-end: 10px;
+				font-size: 13px;
 				content: "•";
 			}		
 		}	

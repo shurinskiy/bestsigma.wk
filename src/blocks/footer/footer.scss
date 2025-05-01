@@ -4,6 +4,16 @@
 	$self: &;
 	padding: 64px 0 80px;
 	background: url('./images/bg-footer.svg') center / cover no-repeat #f8f8f8;
+	
+	@include media('<=xlg') {
+		background-position: calc(50% + 100px) 50%;
+	}
+	
+	@include media('<=md') {
+		background: none;
+		background-color: #fff;
+		padding: 64px 0 0;
+	}
 
 	&__inner {
 		display: flex;
@@ -11,12 +21,39 @@
 		gap: 24px;
 		max-width: 1280px;
 		padding-right: 120px;
+		
+		@include media('<=xlg') {
+			padding-right: 40px;
+		}
+		
+		@include media('<=lg') {
+			padding-right: 0;
+		}
+		
+		@include media('<=md') {
+			flex-flow: column nowrap;
+			width: 100% !important;
+			gap: 55px;
+		}
+	}
+
+	&__first {
+		@include media('<=md') {
+			order: 1;
+			background-color: #BBCDC1;
+			padding: 60px var(--gap) 95px;
+		}
 	}
 
 	&__side {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: flex-end;
+
+		@include media('<=md') {
+			max-width: 280px;
+			margin: 0 auto;
+		}
 	}
 
 	&__logo {
@@ -42,6 +79,7 @@
 	&__contact {
 		display: flex;
 		align-items: center;
+		text-align: right;
 		gap: 10px;
 		font-size: 18px;
 		font-weight: 600;
@@ -49,6 +87,7 @@
 		a {
 			color: inherit;
 			text-decoration: none;
+			line-height: 1;
 		}
 	}
 
@@ -63,9 +102,18 @@
 		text-decoration: none;
 	}
 
+	&__last {
+
+	}
+
 	&__form {
 		flex-grow: 1;
 		max-width: 400px;
 		margin-left: auto;
+
+		@include media('<=md') {
+			margin: 0 auto;
+			max-width: 450px;
+		}
 	}
 }

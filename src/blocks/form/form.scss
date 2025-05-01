@@ -2,20 +2,39 @@
 
 .form {
 	$self: &;
+
+	@include media('<=md') {
+		padding: 0 var(--gap);
+	}
+
+	&_rtl {
+		#{$self}__title {
+			direction: rtl;
+		}
+
+		#{$self}__text {
+			direction: rtl;
+		}
+
+		#{$self}__subtitle {
+			direction: rtl;
+		}
+
+		#{$self}__field input {
+			direction: rtl;
+		}
+	}
 	
 	&__title {
 		margin-bottom: 20px;
-		// text-align: right;
 	}
 	
 	&__text {
 		font-weight: 300;
-		// text-align: right;
 		margin-bottom: 34px;
 	}
 	
 	&__subtitle {
-		// text-align: right;
 		color: #7C7DA1;
 		font-size: 20px;
 	}
@@ -51,5 +70,10 @@
 		font-weight: 500;
 		color: #fff;
 		margin: 55px auto 0;
+
+		@include media('<=md') {
+			min-height: 60px;
+			max-width: 200px;
+		}
 	}
 }

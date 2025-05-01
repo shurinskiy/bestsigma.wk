@@ -2,33 +2,56 @@
 
 .menu {
 	$self: &;
-	font-weight: 500;
-	font-size: 25px;
-	color: var(--darkgreen);
 	display: flex;
-	justify-content: space-between;
+	flex-flow: column nowrap;
+	justify-content: center;
 
+	@include media('<=sm') {
+		padding: 30px;
+	}
+	
 	&__close {
 		@extend %reset-button;
 		display: none;
-		height: 24px;
-		width: 24px;
-
+		height: 29px;
+		width: 30px;
+		position: absolute;
+		top: 18px;
+		right: 20px;
+		z-index: 1;
+		
+		@include media('<=sm') {
+			display: flex;
+			align-items: center;
+			justify-content: center;	
+		}
+		
 		img {
 			width: 72%;
 			height: 72%;
 			display: block;
 			object-fit: cover;
 		}
-
+		
 	}
-
+	
 	&__link {
 		color: inherit;
 		text-decoration: none;
-		height: 60px;
+		font-weight: 600;
+		font-size: 25px;
 		display: inline-flex;
 		align-items: center;
-		justify-content: center;
+		color: var(--darkgreen);
+		height: 60px;
+
+		@include media('<=sm') {
+			font-size: 24px;
+			color: #000;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 }

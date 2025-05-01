@@ -3,17 +3,53 @@
 .about {
 	$self: &;
 	background: url('./images/bg-about.svg') calc(50% + 75px) 50% / cover no-repeat #fff;
-	min-height: 710px;
+	min-height: fluid(710px, 550px);
 	padding: 50px 0	;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+	
+	@include media('<=xlg') {
+		background-position: 52% 50%;
+	}
+	
+	@include media('<=lg') {
+		background-position: 54% 50%;
+	}
+	
+	@include media('<=md') {
+		background-position: 56% 50%;
+	}
+	
+	@include media('<=sm') {
+		background-position: 56% 50%;
+		min-height: auto;
+	}
+	
+	@include media('<=xxs') {
+		background: url('./images/bg-about-mobile.svg') center top / auto no-repeat #fff;
+	}
+
+	&_rtl {
+		#{$self}__title {
+			direction: rtl;
+		}
+		
+		#{$self}__text {
+			direction: rtl;
+		}
+		
+	}
 
 	&__inner {
 		display: flex;
-		grid-gap: 18px;
+		grid-gap: 48px;
 		align-items: center;
 		max-width: 1060px;
+
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+		}
 	}
 
 	&__side {
@@ -23,26 +59,44 @@
 	&__title {
 		color: var(--darkgreen);
 		margin-bottom: 20px;
-		font-weight: 800;
-		font-size: 70px;
+		font-weight: 700;
+		font-size: fluid(70px, 40px);
+
+		@include media('<=sm') {
+			text-align: center;
+		}
 	}
 	
 	&__text {
 		color: var(--darkgreen);
 		margin-bottom: 50px;
 		font-weight: 300;
-		font-size: 25px;
+		font-size: fluid(25px, 15px);
 		letter-spacing: 0.023em;
+
+		@include media('<=sm') {
+			margin: 0;
+		}
 	}
 
 	&__image {
-		width: 490px;
+		width: fluid(490px, 235px);
 		aspect-ratio: 1;
 		flex-shrink: 0;
 		border: 30px solid var(--green);
+		border-width: fluid(30px, 15px);
 		box-sizing: content-box;
 		border-radius: 1000px;
-		margin-right: -250px;
+		margin-right: -22%;
 		overflow: hidden;
+		
+		@include media('<=xlg') {
+			margin-right: -10%;
+		}
+
+		@include media('<=sm') {
+			margin: 0 auto;
+			order: -1;
+		}
 	}
 }

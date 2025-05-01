@@ -3,21 +3,79 @@
 .header {
 	$self: &;
 	background: url('./images/bg-header.svg') calc(50% - 28px) 50% / cover no-repeat #fff;
+	padding-bottom: 30px;
+
+	@include media('<=sm') {
+		background-position: calc(50% + 200px) 50%;
+	}
+	
+	@include media('<=xs') {
+		background-position: calc(50% + 220px) 50%;
+	}
+
+	@include media('<=xxs') {
+		background: url('./images/bg-header-mobile.svg') center bottom / auto no-repeat #fff;
+	}
+
+	&_rtl {
+		#{$self}__side {
+			direction: rtl;
+		}
+	}
 
 	&__inner {
 		position: relative;
+		min-height: fluid(1130px, 520px);
 		max-width: 1260px;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: 24px;
+		
+		@include media('<=sm') {
+			min-height: 920px;
+			gap: 50px;
+		}
+		
+		@include media('<=xs') {
+			gap: 65px;
+		}
+		
+		@include media('<=xxs') {
+			min-height: 820px;
+		}
 
 		&::before {
 			display: block;
 			content: '';
 			background: url('./images/decor-1.svg') center / contain no-repeat transparent;
+			width: fluid(640px, 160px);
+			aspect-ratio: 1.45;
+			translate: -46% -37%;
 			position: absolute;
-			height: 440px;
-			width: 640px;
-			left: -295px;
-			top: -165px;
+			left: 0;
+			top: 0;
 			z-index: 1;
+			
+			@include media('<=xxs') {
+				translate: -50% -50%;
+				z-index: 12;
+			}
+		}
+		
+		&::after {
+			display: none;
+			content: '';
+			background: url('./images/decor-3.svg') center / contain no-repeat transparent;
+			width: 260px;
+			aspect-ratio: 2.3;
+			position: absolute;
+			right: -30px;
+			top: 0;
+			
+			@include media('<=xs') {
+				display: block;
+				width: 210px;
+			}
 		}
 	}
 
@@ -25,20 +83,31 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
-		position: relative;
-		z-index: 2;
+		z-index: 10;
 		height: 160px;
-		margin-bottom: 24px;
 		max-width: 750px;
 		width: 100%;
 		margin-left: auto;
+
+		@include media('<=md') {
+			height: 95px;
+		}
+
+		@include media('<=sm') {
+			position: static;
+		}
 	}
 
 	&__toggle {
 		@extend %reset-button;
 		display: none;
-		height: 24px;
-		width: 32px;
+		height: 28px;
+		width: 36px;
+		margin-left: 16px;
+
+		@include media('<=sm') {
+			display: block;
+		}
 
 		img {
 			width: 100%;
@@ -50,31 +119,71 @@
 
 	&__menu {
 		display: contents;
+
+		@include media('<=md') {
+			margin: 0 auto;
+		}
+		
+		@include media('<=sm') {
+			position: fixed;
+			z-index: 11;
+			top: 0;
+			left: -410px; 
+			width: 100%;
+			max-width: 400px;
+			height: calc(var(--vh, 1dvh) * 100);
+			box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+			transition: left 0.3s linear;
+			background-color: #fff;
+			display: flex;
+	
+			&.opened {
+				left: 0;
+			}
+		}
 	}
 
 	&__logo {
+		max-width: 150px;
+
+		@include media('<=xxs') {
+			max-width: 115px;
+			margin-bottom: 20px;
+		}
 
 		img {
 			display: block;
-			max-width: 150px;
 			width: 100%;
 		}
 	}
 
 	&__body {
-		min-height: 970px;
 		display: flex;
 		gap: 48px;
+		
+		@include media('<=sm') {
+			flex-flow: column nowrap;
+		}
+		
+		@include media('<=xs') {
+			gap: 30px;
+		}
+
 	}
 
 	&__image {
-		width: 730px;
+		width: fluid(730px, 315px);
 		aspect-ratio: 1;
 		align-self: flex-start;
 		border-radius: 1000px;
-		margin-left: -190px;
+		margin-left: -15%;
 		overflow: hidden;
 		flex-shrink: 0;
+
+		@include media('<=xs') {
+			margin: 0 auto;
+			max-width: 100%;
+		}
 
 		img {
 			width: 100%;
@@ -88,29 +197,51 @@
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: center;
-		max-height: 800px;
+		padding-top: 65px;
+
+		@include media('<=sm') {
+			padding: 0;
+		}
 	}
 
 	&__title {
-		font-weight: 900;
+		font-weight: 700;
 		color: var(--darkgreen);
-		font-size: 50px;
+		font-size: fluid(50px, 20px);
 		margin-bottom: 30px;
+		
+		@include media('<=xs') {
+			margin-bottom: 14px;
+			text-align: center;
+		}
 	}
 
 	&__sentence {
-		font-size: 25px;
 		font-weight: 100;
 		margin-bottom: 50px;
+		font-size: fluid(25px, 16px);
+		
+		@include media('<=lg') {
+			br {
+				display: none;
+			}
+		}
+		
+		@include media('<=xs') {
+			margin-bottom: 35px;
+			text-align: center;
+		}
 	}
 
 	&__button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 		padding: 10px;
 		height: 70px;
 		color: #000;
+		line-height: 1;
 		font-size: 25px;
 		font-weight: 700;
 		text-decoration: none;
@@ -120,5 +251,8 @@
 		max-width: 260px;
 		min-width: fit-content;
 
+		@include media('<=xs') {
+			margin: 0 auto;
+		}
 	}
 }

@@ -3,21 +3,21 @@ import Swiper from 'swiper';
 import { Pagination } from 'swiper/modules';
 
 (() => {
-	const section = document.querySelector('[data-choice-js]');
+	const section = document.querySelector('[data-blog-js]');
 	if (! section) return;
 
-	const slider = section.querySelector('.choice__items.swiper');
+	const slider = section.querySelector('.blog__items.swiper');
 	let swiper;
 
 	const enableSwiper = (el) => {
 		swiper = new Swiper(el, {
 			modules: [Pagination],
 			watchOverflow: true,
-			spaceBetween: 18,
+			spaceBetween: 32,
 			threshold: 10,
 			pagination: {
-				el: `.choice__dots`,
-				bulletClass: 'choice__dot',
+				el: `.blog__dots`,
+				bulletClass: 'blog__dot',
 				bulletActiveClass: 'active',
 				bulletElement: 'button',
 				clickable: true
@@ -27,22 +27,19 @@ import { Pagination } from 'swiper/modules';
 					slidesPerView: 1.0,
 				},
 				481: {
-					slidesPerView: 1.4,
+					slidesPerView: 1.2,
 				},
 				641: {
-					slidesPerView: 1.8,
+					slidesPerView: 1.6,
 				},
 				781: {
-					slidesPerView: 2.2,
-				},
-				961: {
-					slidesPerView: 2.7,
+					slidesPerView: 1.8,
 				}
 			}
 		});
 	}
 
-	enquire.register("screen and (max-width: 1100px)", {
+	enquire.register("screen and (max-width: 960px)", {
 		match: function() {
 			enableSwiper(slider);
 		},

@@ -2,7 +2,11 @@
 
 .choice {
 	$self: &;
-	padding: 105px 0 140px;
+	padding: 105px 0 230px;
+	
+	@include media('<=lg') {
+		padding: 105px 0 160px;
+	}
 
 	&__inner {
 		max-width: 1200px;
@@ -12,11 +16,11 @@
 			display: block;
 			content: '';
 			background: url('./images/decor-1.svg') center / contain no-repeat transparent;
+			width: fluid(640px, 160px);
+			aspect-ratio: 1.45;
 			position: absolute;
-			height: 440px;
-			width: 640px;
-			left: -440px;
 			bottom: -280px;
+			left: -440px;
 			z-index: 1;
 		}
 
@@ -24,9 +28,9 @@
 			display: block;
 			content: '';
 			background: url('./images/decor-2.svg') center / contain no-repeat transparent;
+			width: fluid(260px, 150px);
+			aspect-ratio: 1.1;
 			position: absolute;
-			height: 280px;
-			width: 260px;
 			left: 100%;
 			top: -90px;
 			z-index: 1;
@@ -35,21 +39,33 @@
 
 	&__title {
 		text-align: center;
-		margin-bottom: 70px;
+		margin-bottom: 100px;
 	}
 
-	&__items {
+	&__items.swiper {
 		z-index: 2;
+
+		@include media('<=lg') {
+			margin-left: calc(var(--gap) * -1);
+			margin-right: calc(var(--gap) * -1);
+			padding-left: var(--gap);
+			padding-right: var(--gap);
+		}
 				
 		.swiper-wrapper {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 18px;
+
+			@include media('<=lg') {
+				display: flex;
+				grid-gap: 0;
+			}
 		}
 	}
 
 	&__item {
-		padding: 35px 0 90px;
+		// padding: 35px 0 90px;
 	}
 
 	&__icon {
@@ -74,5 +90,28 @@
 		font-size: 20px;
 		max-width: 350px;
 		margin: 0 auto;
+	}
+
+	&__dots {
+		display: none;
+		justify-content: center;
+		gap: 20px;
+		padding-top: 60px;
+
+		@include media('<=lg') {
+			display: flex;
+		}
+	}
+
+	&__dot {
+		@extend %reset-button;
+		aspect-ratio: 1;
+		width: 14px;
+		background-color: #828282;
+		border-radius: 100px;
+
+		&.active {
+			background-color: var(--darkgreen);
+		}
 	}
 }
