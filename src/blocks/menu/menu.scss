@@ -9,6 +9,10 @@
 	@include media('<=sm') {
 		padding: 30px;
 	}
+
+	&_rtl {
+		direction: rtl;
+	}
 	
 	&__close {
 		@extend %reset-button;
