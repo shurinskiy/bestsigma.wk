@@ -49,10 +49,13 @@ body, html {
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-width: 100%;
 }
 
 body {
-	overflow-x: hidden;
 	
 	&.underlay {
 		&::before {
