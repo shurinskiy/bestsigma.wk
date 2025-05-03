@@ -2,9 +2,15 @@
 
 .blog {
 	$self: &;
-	padding: 140px 0 90px ;
+	padding: 132px 0 93px;
+	
+	@include media('<=xs') {
+		padding: 55px 0 300px;
+	}
 
 	&_rtl {
+		font-family: "AS", sans-serif;
+
 		#{$self}__title {
 			direction: rtl;
 		}
@@ -12,15 +18,59 @@
 		#{$self}__item {
 			direction: rtl;
 		}
+
+		#{$self}__subtitle {
+			font-size: fluid(30px, 24px);
+		}
+
+		#{$self}__text {
+			font-size: fluid(20px, 15px);
+			line-height: 1.0;
+		}
+
+		#{$self}__link {
+			font-size: 20px;
+			font-weight: 500;
+		}
 	}
 
 	&__inner {
 		max-width: 1220px;
+		position: relative;
+	
+		&::after {
+			display: none;
+			content: '';
+			background: url('./images/decor-1.svg') center / contain no-repeat transparent;
+			width: 280px;
+			aspect-ratio: 1.1;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			z-index: 1;
+			translate: 56% -16%;
+			scale: -1 1;
+			
+			@include media('<=xs') {
+				display: block;
+			}
+			
+			@include media('<=xxs') {
+				width: 240px;
+			}
+		}
 	}
 
 	&__title {
 		text-align: center;
-		margin-bottom: 135px;
+		margin-bottom: 132px;
+		color: #000;
+		font-size: fluid(50px, 40px);
+		font-weight: 700;
+
+		@include media('<=xs') {
+			margin-bottom: 65px;
+		}
 	}
 
 	&__items.swiper {
@@ -52,13 +102,26 @@
 		display: flex;
 		flex-flow: column nowrap;
 		height: auto;
+		// min-height: 400px;
 	}
 
 	&__image {
-		margin-bottom: 30px;
+		margin: 0 auto 28px;
 		border-radius: 5px;
 		height: 260px;
 		overflow: hidden;
+		
+		@include media('<=xs') {
+			width: 100%;	
+			max-width: 380px;
+			margin: 0 auto 28px;
+		}
+		
+		@include media('<=xs') {
+			height: 135px;
+			max-width: 275px;
+			margin: 0 auto 28px;
+		}
 
 		img {
 			width: 100%;
@@ -83,19 +146,25 @@
 	&__text {
 		font-weight: 300;
 		margin-bottom: 10px;
+		font-size: fluid(16px, 15px);
+
+		@include media('<=xs') {
+			
+		}
 	}
 
 	&__link {
 		margin-top: auto;
 		color: #F4CA3E;
-		font-size: 20px;
+		font-size: fluid(20px, 18px);
+		font-weight: 200;
 	}
 	
 	&__dots {
 		display: none;
 		justify-content: center;
 		gap: 20px;
-		padding-top: 60px;
+		padding-top: 40px;
 
 		@include media('<=md') {
 			display: flex;

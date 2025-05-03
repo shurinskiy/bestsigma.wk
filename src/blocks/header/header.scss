@@ -4,13 +4,14 @@
 	$self: &;
 	background: url('./images/bg-header.svg') calc(50% - 28px) 50% / cover no-repeat #fff;
 	padding-bottom: 30px;
-
+	
 	@include media('<=sm') {
 		background-position: calc(50% + 200px) 50%;
 	}
 	
 	@include media('<=xs') {
 		background-position: calc(50% + 220px) 50%;
+		padding-bottom: 26px;
 	}
 
 	@include media('<=xxs') {
@@ -18,8 +19,19 @@
 	}
 
 	&_rtl {
+		#{$self}__title {
+			font-family: "AS", sans-serif;
+			font-size: fluid(67px, 30px);
+			font-weight: 800;
+		}
+
 		#{$self}__side {
 			direction: rtl;
+		}
+		
+		#{$self}__sentence {
+			font-family: "AS", sans-serif;
+			font-weight: 300;
 		}
 	}
 
@@ -149,11 +161,7 @@
 		@include media('<=xxs') {
 			max-width: 115px;
 			margin-bottom: 20px;
-		}
-
-		img {
-			display: block;
-			width: 100%;
+			font-size: 9px;
 		}
 	}
 
@@ -219,7 +227,7 @@
 	&__sentence {
 		font-weight: 100;
 		margin-bottom: 50px;
-		font-size: fluid(25px, 16px);
+		font-size: fluid(25px, 14px);
 		
 		@include media('<=lg') {
 			br {
@@ -228,7 +236,7 @@
 		}
 		
 		@include media('<=xs') {
-			margin-bottom: 35px;
+			margin-bottom: 40px;
 			text-align: center;
 		}
 	}

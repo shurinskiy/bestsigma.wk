@@ -8,30 +8,47 @@
 	}
 
 	&_rtl {
+		font-family: "AS", sans-serif;
+
 		#{$self}__title {
 			direction: rtl;
+			font-size: fluid(50px, 40px);
 		}
-
+		
 		#{$self}__text {
 			direction: rtl;
+			line-height: 1.3;
 		}
 
 		#{$self}__subtitle {
 			direction: rtl;
+			font-size: fluid(30px, 20px);
 		}
 
-		#{$self}__field input {
+		#{$self}__field {
 			direction: rtl;
+			margin-left: auto;
+		}
+
+		#{$self}__button {
+			font-size: 26px;
 		}
 	}
 	
 	&__title {
 		margin-bottom: 20px;
+		font-size: 40px;
+		font-weight: 700;
 	}
 	
 	&__text {
 		font-weight: 300;
 		margin-bottom: 34px;
+		line-height: 1.62;
+
+		@include media('<=xs') {
+			margin-bottom: 45px;
+		}
 	}
 	
 	&__subtitle {
@@ -42,6 +59,10 @@
 	&__field {
 		border-bottom: 3px solid #000;
 		margin-bottom: 16px;
+
+		@include media('<=xs') {
+			max-width: 270px;
+		}
 
 		input {
 			@extend %reset-input;

@@ -5,6 +5,7 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+	flex-direction: column-reverse;
 
 	@include media('<=sm') {
 		padding: 30px;

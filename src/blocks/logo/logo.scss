@@ -1,0 +1,17 @@
+@use 'lib' as *;
+
+.logo {
+	$self: &;
+	display: flex;
+	flex-flow: column nowrap;
+	text-decoration: none;
+	color: #000;
+	font-size: 11.7px;
+	font-weight: 600;
+	text-align: right;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}

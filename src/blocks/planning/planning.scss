@@ -4,14 +4,19 @@
 	$self: &;
 
 	&_rtl {
+		#{$self}__title {
+			font-size: fluid(70px, 30px);
+			font-family: "AS", sans-serif;
+		}
+
 		#{$self}__body {
 			direction: rtl;
-			max-width: 810px;
+			max-width: 960px;
 		}
 	}
 
 	&__inner {
-		max-width: 1060px;
+		max-width: 1100px;
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
@@ -26,10 +31,10 @@
 			z-index: 1;
 			left: 100%;
 			top: 100%;
-			translate: -9% -104%;
+			translate: -12% -106%;
 			
 			@include media('<=lg') {
-				translate: -30% 0%;
+				translate: -47% 5%;
 			}
 		}
 	}
@@ -39,26 +44,39 @@
 	}
 
 	&__title {
-		margin-bottom: 28px;
+		margin-bottom: 24px;
 		z-index: 1;
-		font-size: fluid(40px, 30px);
+		font-size: fluid(40px, 25px);
 		font-weight: 700;
 		color: #000;
+		
+		@include media('<=xs') {
+			margin-bottom: 38px;
+		}
 	}
 
 	&__text {
-		font-size: fluid(20px, 15px);
+		font-size: fluid(20px, 14px);
 		max-width: 810px;
 		z-index: 1;
 	}
 	
 	&__row {
 		font-weight: 200;
-		margin-bottom: 22px;
+		margin-bottom: 26px;
+
+		@include media('<=xs') {
+			margin-bottom: 19px;
+		}
 		
 		h3 {
-			font-weight: 400;
+			font-weight: 600;
 			line-height: 1.3;
+			
+			@include media('<=xs') {
+				font-weight: 700;
+				line-height: 1.0;
+			}
 			
 			&::before {
 				display: inline-block;
@@ -67,6 +85,12 @@
 				font-size: 13px;
 				content: "•";
 			}		
-		}	
+		}
+
+		p {
+			@include media('<=xs') {
+				line-height: 1.0;
+			}
+		}
 	}
 }

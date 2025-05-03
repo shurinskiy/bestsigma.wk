@@ -26,15 +26,25 @@
 // body { @include screen-media(); }
 
 
-@include font-face("Inter-ExtraLight", "MR", 200);
-@include font-face("Inter-ExtraBold", "MR", 800);
-@include font-face("Inter-SemiBold", "MR", 600);
-@include font-face("Inter-Regular", "MR", 400);
-@include font-face("Inter-Medium", "MR", 500);
-@include font-face("Inter-Light", "MR", 300);
-@include font-face("Inter-Black", "MR", 900);
-@include font-face("Inter-Bold", "MR", 700);
-@include font-face("Inter-Thin", "MR", 100);
+@include font-face("Assistant-ExtraLight", "AS", 200);
+@include font-face("Assistant-ExtraBold", "AS", 800);
+@include font-face("Assistant-SemiBold", "AS", 600);
+@include font-face("Assistant-Regular", "AS", 400);
+@include font-face("Assistant-Medium", "AS", 500);
+@include font-face("Assistant-Light", "AS", 300);
+@include font-face("Assistant-Black", "AS", 900);
+@include font-face("Assistant-Bold", "AS", 700);
+@include font-face("Assistant-Thin", "AS", 100);
+
+@include font-face("Inter-ExtraLight", "IR", 200);
+@include font-face("Inter-ExtraBold", "IR", 800);
+@include font-face("Inter-SemiBold", "IR", 600);
+@include font-face("Inter-Regular", "IR", 400);
+@include font-face("Inter-Medium", "IR", 500);
+@include font-face("Inter-Light", "IR", 300);
+@include font-face("Inter-Black", "IR", 900);
+@include font-face("Inter-Bold", "IR", 700);
+@include font-face("Inter-Thin", "IR", 100);
 
 body, html {
 	// scrollbar-gutter: stable;
@@ -43,7 +53,7 @@ body, html {
 	background-color: var(--background);
 	font-size: var(--size);
 	color: var(--text);
-	font-family: "MR", sans-serif;
+	font-family: "IR", sans-serif;
 	line-height: 1.2;
 	font-weight: 400;
 	min-height: 100vh;

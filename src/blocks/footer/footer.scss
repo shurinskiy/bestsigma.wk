@@ -2,7 +2,6 @@
 
 .footer {
 	$self: &;
-	padding: 64px 0 80px;
 	background: url('./images/bg-footer.svg') center / cover no-repeat #f8f8f8;
 	
 	@include media('<=xlg') {
@@ -12,43 +11,48 @@
 	@include media('<=md') {
 		background: none;
 		background-color: #fff;
-		padding: 64px 0 0;
 	}
-
+	
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		gap: 24px;
 		max-width: 1280px;
-		padding-right: 120px;
+		padding: 0 165px 80px 0;
 		
 		@include media('<=xlg') {
-			padding-right: 40px;
+			padding: 0 40px 80px 0;
 		}
 		
 		@include media('<=lg') {
-			padding-right: 0;
+			padding: 0 0 80px 0;
 		}
 		
 		@include media('<=md') {
 			flex-flow: column nowrap;
 			width: 100% !important;
+			padding: 0;
 			gap: 55px;
 		}
 	}
 
 	&__first {
+		padding-top: 65px;
+		flex-grow: 1;
+		
 		@include media('<=md') {
 			order: 1;
 			background-color: #BBCDC1;
 			padding: 60px var(--gap) 95px;
 		}
 	}
-
+	
 	&__side {
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: flex-end;
+		max-width: 300px;
+		flex-grow: 1;
 
 		@include media('<=md') {
 			max-width: 240px;
@@ -58,9 +62,10 @@
 
 	&__logo {
 		display: block;
-		margin-bottom: 85px;
+		margin-bottom: 78px;
 		max-width: 246px;
 		width: 100%;
+		font-size: 19px;
 
 		img {
 			display: block;
@@ -103,17 +108,46 @@
 	}
 
 	&__last {
-
-	}
-
-	&__form {
+		padding-top: 82px;
 		flex-grow: 1;
+		
+		@include media('<=xs') {
+			padding-top: 20px;
+		}
+	}
+	
+	&__form {
 		max-width: 400px;
 		margin-left: auto;
 
 		@include media('<=md') {
 			margin: 0 auto;
 			max-width: 450px;
+		}
+	}
+
+	&__developer {
+		text-align: center;
+		font-size: fluid(14px, 12px);
+		color: #333;
+		padding: 3px var(--gap);
+		background-color: rgba(255, 255, 255, 0.3);
+
+		@include media('<=md') {
+			background-color: #cedbd2;
+		}
+
+		span {
+			color: #bd0000;
+		}
+
+		a {
+			text-decoration: none;
+			color: #777;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

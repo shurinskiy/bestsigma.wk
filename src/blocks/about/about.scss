@@ -4,7 +4,7 @@
 	$self: &;
 	background: url('./images/bg-about.svg') calc(50% + 75px) 50% / cover no-repeat #fff;
 	min-height: fluid(710px, 550px);
-	padding: 50px 0	;
+	padding: 50px 0;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -25,25 +25,45 @@
 		background-position: 56% 50%;
 		min-height: auto;
 	}
+
+	@include media('<=xs') {
+		padding: 70px 0	60px;
+	}
 	
 	@include media('<=xxs') {
 		background: url('./images/bg-about-mobile.svg') center top / auto no-repeat #fff;
 	}
 
 	&_rtl {
+
+		#{$self}__inner {
+			grid-gap: 100px;
+
+			@include media('<=xs') {
+				grid-gap: 40px;
+			}
+		}
+		
+		#{$self}__side {
+			font-family: "AS", sans-serif;
+		}
+
 		#{$self}__title {
 			direction: rtl;
+			font-weight: 800;
 		}
 		
 		#{$self}__text {
+			font-weight: 400;
+			font-size: fluid(28px, 15px);
+			line-height: 1.35;
 			direction: rtl;
 		}
-		
 	}
 
 	&__inner {
 		display: flex;
-		grid-gap: 48px;
+		grid-gap: 24px;
 		align-items: center;
 		max-width: 1060px;
 
@@ -65,17 +85,25 @@
 		@include media('<=sm') {
 			text-align: center;
 		}
+
+		@include media('<=xs') {
+			margin-bottom: 27px;
+		}
 	}
 	
 	&__text {
 		color: var(--darkgreen);
 		margin-bottom: 50px;
-		font-weight: 300;
-		font-size: fluid(25px, 15px);
-		letter-spacing: 0.023em;
+		font-weight: 200;
+		font-size: fluid(25px, 14px);
+		letter-spacing: 0.02em;
 
 		@include media('<=sm') {
 			margin: 0;
+		}
+
+		@include media('<=xs') {
+			text-align: center;
 		}
 	}
 
@@ -87,7 +115,7 @@
 		border-width: fluid(30px, 15px);
 		box-sizing: content-box;
 		border-radius: 1000px;
-		margin-right: -22%;
+		margin-right: -24%;
 		overflow: hidden;
 		
 		@include media('<=xlg') {
