@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css?v=1746309880988">
-    <title></title>
+    <link rel="stylesheet" href="style.css?v=1746379946638">
+    <title>בסט סיגמא</title>
+
+    <!-- Стандартные иконки -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+
+    <!-- Базовые Open Graph теги -->
+    <meta property="og:title" content="בסט סיגמא" />
+    <meta property="og:description" content="פרישה נכונה לעתיד שקט" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ваш-сайт.ru/страница" />
+    <meta property="og:image" content="https://ваш-сайт.ru/images/logo-social-preview.jpg" />
+    <meta property="og:site_name" content="בסט סיגמא" />
+
+    <!-- Детали изображения (рекомендуется для лого) -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="בסט סיגמא" />
+
+    <!-- Для Twitter/X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="בסט סיגמא" />
+    <meta name="twitter:description" content="פרישה נכונה לעתיד שקט" />
+    <meta name="twitter:image" content="https://ваш-сайт.ru/images/logo-social-preview.jpg" />
+    <meta name="twitter:site" content="@ваш_аккаунт" />
 </head>
 <body id="home">
 <header class="header header_rtl " data-header-js>
     <div class="header__inner container">
         <div class="header__top">
-            <button class="header__toggle">
-                <img src="./images/toggle-icon.svg" alt="">
-            </button>
-            <nav class="header__menu menu menu_rtl">
-                <button class="menu__close">
-                    <img src="./images/close-icon.svg" alt="">
-                </button>
-                <a class="menu__link" href="#blog">בלוג</a>
-                <a class="menu__link" href="#about">מי אנחנו</a>
-                <a class="menu__link" href="#planning">דף הבית</a>
-            </nav>
+            <!-- <button class="header__toggle">
+				<img src="./images/toggle-icon.svg" alt="">
+			</button>
+			<nav class="header__menu menu menu_rtl">
+				<button class="menu__close">
+					<img src="./images/close-icon.svg" alt="">
+				</button>
+				<a class="menu__link" href="#blog">בלוג</a>
+				<a class="menu__link" href="#about">מי אנחנו</a>
+				<a class="menu__link" href="#planning">דף הבית</a>
+			</nav> -->
+            <a class="header__lang header__lang_he" href="./">עִברִית</a>
             <a class="header__logo logo" href="./">
                 <img src="./images/logo.webp" alt="">
                 <span>בסט סיגמא פרישה ופיננסים</span>
@@ -34,7 +63,7 @@
             <div class="header__side">
                 <h1 class="header__title">פרישה נכונה לעתיד שקט</h1>
                 <div class="header__sentence">ייעוץ פיננסי ופרישה מותאם אישית, עם דגש על ניהול כספים לטווח ארוך ותכנון פרישה מוצלח.</div>
-                <a class="header__button" href="./">צור קשר</a>
+                <a class="header__button" href="#form">צור קשר</a>
             </div>
         </div>
     </div>
@@ -164,34 +193,34 @@
     </div>
 </section>
 
-<section class="blog blog_rtl" data-blog-js>
-    <div class="blog__inner container" id="blog">
-        <h2 class="blog__title">בלוג</h2>
-        <div class="blog__items swiper" dir="rtl">
-            <div class="swiper-wrapper">
-                <div class="blog__item swiper-slide">
-                    <div class="blog__image">
-                        <img src="./images/stuff/blog-image-1.webp" alt="">
-                    </div>
-                    <h3 class="blog__subtitle">המפתח לחיים מאוזנים ומלאי סיפוק</h3>
-                    <div class="blog__data">05.14.2024</div>
-                    <div class="blog__text">רגע הפרישה מעבודה אינו רק שינוי בשגרת היומיום&#160;&#8212; הוא הזדמנות לבנות מחדש את החיים&#8230;</div>
-                    <a class="blog__link" href="./">המשך לקרוא</a>
-                </div>
-                <div class="blog__item swiper-slide">
-                    <div class="blog__image">
-                        <img src="./images/stuff/blog-image-2.webp" alt="">
-                    </div>
-                    <h3 class="blog__subtitle">פרישה: תחילתו של מסע חדש</h3>
-                    <div class="blog__data">12.11.2023</div>
-                    <div class="blog__text">המעבר לפרישה מסמל את סיומו של פרק משמעותי בחיים, אך גם את תחילתו של מסע חדש מלא&#8230;</div>
-                    <a class="blog__link" href="./">המשך לקרוא</a>
-                </div>
-            </div>
-            <div class="blog__dots"></div>
-        </div>
-    </div>
-</section>
+<!-- <section class="blog blog_rtl" data-blog-js>
+	<div class="blog__inner container" id="blog">
+		<h2 class="blog__title">בלוג</h2>
+		<div class="blog__items swiper" dir="rtl">
+			<div class="swiper-wrapper">
+				<div class="blog__item swiper-slide">
+					<div class="blog__image">
+						<img src="./images/stuff/blog-image-1.webp" alt="">
+					</div>
+					<h3 class="blog__subtitle">המפתח לחיים מאוזנים ומלאי סיפוק</h3>
+					<div class="blog__data">14/05/2024</div>
+					<div class="blog__text">רגע הפרישה מעבודה אינו רק שינוי בשגרת היומיום – הוא הזדמנות לבנות מחדש את החיים...</div>
+					<a class="blog__link" href="./">המשך לקרוא</a>
+				</div>
+				<div class="blog__item swiper-slide">
+					<div class="blog__image">
+						<img src="./images/stuff/blog-image-2.webp" alt="">
+					</div>
+					<h3 class="blog__subtitle">פרישה: תחילתו של מסע חדש</h3>
+					<div class="blog__data">11/12/2023</div>
+					<div class="blog__text">המעבר לפרישה מסמל את סיומו של פרק משמעותי בחיים, אך גם את תחילתו של מסע חדש מלא...</div>
+					<a class="blog__link" href="./">המשך לקרוא</a>
+				</div>
+			</div>
+			<div class="blog__dots"></div>
+		</div>
+	</div>
+</section> -->
 
 <footer class="footer">
     <div class="footer__inner container">
@@ -207,11 +236,11 @@
                         <img src="./images/contact-icon-geo.svg" alt="">
                     </div>
                     <div class="footer__contact">
-                        <a href="./">+972 524455544</a>
+                        <a href="tel:+972524455544">+972 524455544</a>
                         <img src="./images/contact-icon-phone.svg" alt="">
                     </div>
                     <div class="footer__contact">
-                        <a href="./">0524455@gmail.com</a>
+                        <a href="mailto:dima.bestsigma@gmail.com">dima.bestsigma@gmail.com</a>
                         <img src="./images/contact-icon-email.svg" alt="">
                     </div>
                 </div>
@@ -229,7 +258,7 @@
             </div>
         </div>
         <div class="footer__last">
-            <form class="footer__form form form_rtl" action="./" data-form-js>
+            <form class="footer__form form form_rtl" id="form" action="./" data-form-js>
                 <h2 class="form__title">צור קשר</h2>
                 <div class="form__text">לשאלות נוספות וקביעת פגישה ניתן להשאיר פרטים ואנו ניצור אתכם קשר בהקדם.</div>
                 <h3 class="form__subtitle">שם</h3>
@@ -246,9 +275,9 @@
             </form>
         </div>
     </div>
-    <div class="footer__developer">&#169; Made with <span>&#9829;</span> by&#160;WWdiv Studio (<a href="https://wwdiv.com/">https://wwdiv.com/</a>)</div>
+    <div class="footer__developer"><a href="https://wwdiv.com/">&#169; Made with <span>&#9829;</span> by&#160;WWdiv Studio (https://wwdiv.com/)</a></div>
 </footer>
 
-<script src="common.js?v=1746309880988"></script>
+<script src="common.js?v=1746379946638"></script>
 </body>
 </html>

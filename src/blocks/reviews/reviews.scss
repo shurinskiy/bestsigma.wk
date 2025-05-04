@@ -2,6 +2,7 @@
 
 .reviews {
 	$self: &;
+	margin-bottom: 160px;
 
 	&_rtl {
 		#{$self}__title {

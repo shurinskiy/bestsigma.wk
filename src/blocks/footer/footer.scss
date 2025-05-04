@@ -55,7 +55,7 @@
 		flex-grow: 1;
 
 		@include media('<=md') {
-			max-width: 240px;
+			max-width: 290px;
 			margin: 0 auto;
 		}
 	}
@@ -70,6 +70,10 @@
 		img {
 			display: block;
 			width: 100%;
+		}
+
+		@include media('<=md') {
+			margin: 0 auto 78px;
 		}
 	}
 
@@ -101,6 +105,10 @@
 		justify-content: space-between;
 		max-width: 240px;
 		width: 100%;
+
+		@include media('<=md') {
+			margin: 0 auto;
+		}
 	}
 
 	&__social {
@@ -129,7 +137,7 @@
 	&__developer {
 		text-align: center;
 		font-size: fluid(14px, 12px);
-		color: #333;
+		color: #222;
 		padding: 3px var(--gap);
 		background-color: rgba(255, 255, 255, 0.3);
 
@@ -138,16 +146,12 @@
 		}
 
 		span {
-			color: #bd0000;
+			color: #888;
 		}
 
 		a {
 			text-decoration: none;
-			color: #777;
-
-			&:hover {
-				text-decoration: underline;
-			}
+			color: inherit;
 		}
 	}
 }

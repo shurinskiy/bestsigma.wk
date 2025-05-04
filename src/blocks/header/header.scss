@@ -33,6 +33,11 @@
 			font-family: "AS", sans-serif;
 			font-weight: 300;
 		}
+		
+		#{$self}__button {
+			font-family: "AS", sans-serif;
+
+		}
 	}
 
 	&__inner {
@@ -60,7 +65,7 @@
 			display: block;
 			content: '';
 			background: url('./images/decor-1.svg') center / contain no-repeat transparent;
-			width: fluid(640px, 160px);
+			width: fluid(640px, 150px);
 			aspect-ratio: 1.45;
 			translate: -46% -37%;
 			position: absolute;
@@ -68,9 +73,14 @@
 			top: 0;
 			z-index: 1;
 			
+			@include media('<=xs') {
+				scale: -1 1;
+				translate: -55% -40%;
+				left: 100%;
+			}
+			
 			@include media('<=xxs') {
-				translate: -50% -50%;
-				z-index: 12;
+				// z-index: 12;
 			}
 		}
 		
@@ -78,35 +88,41 @@
 			display: none;
 			content: '';
 			background: url('./images/decor-3.svg') center / contain no-repeat transparent;
-			width: 260px;
+			scale: -1 1;
+			width: 210px;
 			aspect-ratio: 2.3;
 			position: absolute;
-			right: -30px;
-			top: 0;
+			left: calc(var(--gap) * -1);
+			top: -10px;
 			
 			@include media('<=xs') {
 				display: block;
-				width: 210px;
 			}
 		}
 	}
 
 	&__top {
 		display: flex;
-		align-items: flex-end;
-		justify-content: space-between;
+		align-items: center;
+		justify-content: flex-end;
+		padding-top: 40px;
 		z-index: 10;
-		height: 160px;
-		max-width: 750px;
-		width: 100%;
-		margin-left: auto;
-
+		gap: 50px;
+		
 		@include media('<=md') {
-			height: 95px;
+			
 		}
-
+		
 		@include media('<=sm') {
 			position: static;
+		}
+		
+		@include media('<=xs') {
+			flex-flow: column nowrap;
+			justify-content: center;
+			flex-direction: column-reverse;
+			padding-top: 15px;
+			gap: 5px;
 		}
 	}
 
@@ -155,13 +171,44 @@
 		}
 	}
 
+	&__lang {
+		color: #6B6B6B;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		line-height: 1.0;
+		gap: 14px;
+		font-size: fluid(20px, 16px);
+
+		&::before {
+			display: none;
+			content: '';
+			width: 22px;
+			height: 22px;
+			border-radius: 100px;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		&_he::before {
+			display: block;
+			background-image: url('./images/flag-he.webp');
+		}
+		
+		&_ru::before {
+			display: block;
+			background-image: url('./images/flag-ru.webp');
+		}
+	}
+
 	&__logo {
 		max-width: 150px;
 
 		@include media('<=xxs') {
-			max-width: 115px;
-			margin-bottom: 20px;
-			font-size: 9px;
+			// max-width: 115px;
+			// margin-bottom: 20px;
+			// font-size: 9px;
 		}
 	}
 
@@ -250,7 +297,7 @@
 		height: 70px;
 		color: #000;
 		line-height: 1;
-		font-size: 25px;
+		font-size: fluid(25px, 23px);
 		font-weight: 700;
 		text-decoration: none;
 		background-color: var(--green);

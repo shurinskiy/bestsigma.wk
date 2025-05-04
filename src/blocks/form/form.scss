@@ -78,18 +78,19 @@
 
 	&__button {
 		@extend %reset-button;
-		min-height: 78px;
+		min-height: 70px;
 		padding: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		max-width: 310px;
-		background: linear-gradient(#2C6941 0%, #669F77 100%);
-		border-radius: 100px;
+		max-width: 210px;
+		// background: linear-gradient(#2C6941 0%, #669F77 100%);
+		background-color: var(--green);
+		border-radius: 15px;
 		font-size: 22px;
-		font-weight: 500;
-		color: #fff;
+		font-weight: 700;
+		color: #000;
 		margin: 55px auto 0;
 
 		@include media('<=md') {
