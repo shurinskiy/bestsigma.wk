@@ -51,11 +51,10 @@
 		display: flex;
 		flex-flow: column nowrap;
 		align-items: flex-end;
-		max-width: 300px;
+		max-width: 340px;
 		flex-grow: 1;
 
 		@include media('<=md') {
-			max-width: 290px;
 			margin: 0 auto;
 		}
 	}
