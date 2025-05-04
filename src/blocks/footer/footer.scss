@@ -5,7 +5,7 @@
 	background: url('./images/bg-footer.svg') center / cover no-repeat #f8f8f8;
 	
 	@include media('<=xlg') {
-		background-position: calc(50% + 100px) 50%;
+		background-position: calc(50% + 130px) 50%;
 	}
 	
 	@include media('<=md') {
