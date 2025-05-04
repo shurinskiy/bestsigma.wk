@@ -2,7 +2,7 @@
 
 .choice {
 	$self: &;
-	padding: 110px 0 225px;
+	padding: 110px 0 350px;
 	
 	@include media('<=lg') {
 		padding: 105px 0 160px;
@@ -36,7 +36,7 @@
 			width: fluid(640px, 180px);
 			aspect-ratio: 1.45;
 			position: absolute;
-			translate: -70% 73%;
+			translate: -70% 90%;
 			bottom: 0;
 			left: 0;
 			z-index: 1;

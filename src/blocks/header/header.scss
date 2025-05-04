@@ -46,7 +46,11 @@
 		max-width: 1260px;
 		display: flex;
 		flex-flow: column nowrap;
-		gap: 24px;
+		gap: 60px;
+		
+		@include media('<=lg') {
+			gap: 40px;
+		}
 		
 		@include media('<=sm') {
 			min-height: 920px;
