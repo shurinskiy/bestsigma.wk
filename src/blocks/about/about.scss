@@ -108,15 +108,16 @@
 	}
 
 	&__image {
-		width: fluid(490px, 235px);
+		width: fluid(540px, 270px);
 		aspect-ratio: 1;
 		flex-shrink: 0;
 		border: 30px solid var(--green);
 		border-width: fluid(30px, 15px);
-		box-sizing: content-box;
+		// box-sizing: content-box;
 		border-radius: 1000px;
 		margin-right: -24%;
 		overflow: hidden;
+		flex-grow: 0;
 		
 		@include media('<=xlg') {
 			margin-right: -10%;
