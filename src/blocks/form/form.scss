@@ -91,10 +91,14 @@
 		font-weight: 700;
 		color: #000;
 		margin: 55px 0 0;
-
+		
 		@include media('<=md') {
 			min-height: 60px;
 			max-width: 200px;
+		}
+		
+		@include media('<=xs') {
+			margin: 55px auto 0;
 		}
 	}
 }
