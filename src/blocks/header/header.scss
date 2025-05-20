@@ -32,11 +32,12 @@
 		#{$self}__sentence {
 			font-family: "AS", sans-serif;
 			font-weight: 300;
+			direction: rtl;
 		}
 		
 		#{$self}__button {
 			font-family: "AS", sans-serif;
-
+			font-size: fluid(32px, 30px);
 		}
 	}
 
@@ -276,7 +277,7 @@
 	}
 
 	&__sentence {
-		font-weight: 100;
+		font-weight: 200;
 		margin-bottom: 50px;
 		font-size: fluid(25px, 14px);
 		

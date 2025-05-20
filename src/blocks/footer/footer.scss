@@ -12,6 +12,12 @@
 		background: none;
 		background-color: #fff;
 	}
+
+	&_rtl {
+		#{$self}__contact:first-child a {
+			font-size: 20px;
+		}
+	}
 	
 	&__inner {
 		display: flex;
@@ -124,7 +130,7 @@
 	}
 	
 	&__form {
-		max-width: 400px;
+		max-width: 420px;
 		margin-left: auto;
 
 		@include media('<=md') {

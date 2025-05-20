@@ -58,6 +58,10 @@
 			font-size: fluid(28px, 15px);
 			line-height: 1.35;
 			direction: rtl;
+
+			p {
+				margin-bottom: 30px;
+			}
 		}
 	}
 
@@ -95,8 +99,9 @@
 		color: var(--darkgreen);
 		margin-bottom: 50px;
 		font-weight: 200;
-		font-size: fluid(25px, 14px);
+		font-size: fluid(20px, 14px);
 		letter-spacing: 0.02em;
+		line-height: 1.25;
 
 		@include media('<=sm') {
 			margin: 0;
