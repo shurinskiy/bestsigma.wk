@@ -2,6 +2,7 @@
 
 .form {
 	$self: &;
+	position: relative;
 
 	@include media('<=md') {
 		padding: 0 var(--gap);
@@ -10,6 +11,11 @@
 	&_rtl {
 		font-family: "AS", sans-serif;
 		direction: rtl;
+
+		#{$self}__success {
+			direction: rtl;
+			font-family: "AS", Arial, sans-serif;
+		}
 
 		#{$self}__title {
 			direction: rtl;
@@ -31,6 +37,45 @@
 
 		#{$self}__button {
 			font-size: 26px;
+		}
+
+		#{$self}__success {
+
+			h2 {
+				font-size: fluid(40px, 34px);
+			}
+
+			p {
+				font-size: fluid(22px, 18px);
+			}
+		}
+	}
+
+	&.success #{$self}__success {
+		display: flex;
+	}
+	
+	&__success {
+		display: none;
+		position: absolute;
+		inset: 0;
+		flex-flow: column nowrap;
+		justify-content: center;
+		background-color: #f7f7f7;
+		animation: fadeIn 0.3s;
+
+		@include media('<=md') {
+			background-color: #fff;
+		}
+
+		h2 {
+			font-weight: 700;
+			font-size: fluid(36px, 30px);
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-size: fluid(20px, 16px);
 		}
 	}
 	

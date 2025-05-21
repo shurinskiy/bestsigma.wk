@@ -110,6 +110,10 @@
 		@include media('<=xs') {
 			text-align: center;
 		}
+
+		p {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__image {
@@ -117,7 +121,7 @@
 		aspect-ratio: 1;
 		flex-shrink: 0;
 		border: 30px solid var(--green);
-		border-width: fluid(30px, 15px);
+		border-width: fluid(30px, 21px);
 		// box-sizing: content-box;
 		border-radius: 1000px;
 		margin-right: -24%;
