@@ -93,6 +93,10 @@
 		@include media('<=xs') {
 			margin-bottom: 45px;
 		}
+
+		& + #{$self}__field {
+			@include hide();
+		}
 	}
 	
 	&__subtitle {
